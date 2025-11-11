@@ -87,21 +87,21 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicios" className="relative py-32 px-6 lg:px-8">
+    <section id="servicios" className="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <ScrollReveal direction="up">
-          <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-node-blue/10 border border-node-blue/30 rounded-full mb-6">
-            <span className="text-sm text-node-blue font-medium">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-node-blue/10 border border-node-blue/30 rounded-full mb-4 sm:mb-6">
+            <span className="text-xs sm:text-sm text-node-blue font-medium">
               Nuestros Servicios
             </span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
             Soluciones de IA que{' '}
             <span className="text-node-blue">transforman negocios</span>
           </h2>
-          <p className="text-lg text-white/70 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-white/70 max-w-3xl mx-auto px-4">
             Implementamos tecnología de inteligencia artificial de vanguardia para
             resolver problemas reales y generar valor tangible en tu empresa.
           </p>
@@ -109,37 +109,37 @@ export default function Services() {
         </ScrollReveal>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <ScrollReveal
               key={index}
               direction={index % 2 === 0 ? 'left' : 'right'}
               delay={index * 100}
             >
-              <div className="group relative p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-node-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/10 hover:-translate-y-1">
+              <div className="group relative p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-node-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/10 hover:-translate-y-1">
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-node-blue/0 via-node-blue/0 to-node-blue/0 group-hover:from-node-blue/5 group-hover:to-transparent rounded-2xl transition-all duration-300" />
 
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="w-16 h-16 bg-node-blue/10 border border-node-blue/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-node-blue/10 border border-node-blue/30 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold text-white mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/70 mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-white/70 mb-4 sm:mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-white/60">
+                    <li key={idx} className="flex items-center text-xs sm:text-sm text-white/60">
                       <svg
                         className="w-4 h-4 text-node-blue mr-2 flex-shrink-0"
                         fill="currentColor"
@@ -163,14 +163,14 @@ export default function Services() {
 
         {/* CTA Section */}
         <ScrollReveal direction="fade" delay={800}>
-          <div className="mt-20 text-center">
+          <div className="mt-12 sm:mt-16 lg:mt-20 text-center px-4">
           <a
             href="#contacto"
-            className="inline-flex items-center px-8 py-4 bg-node-blue hover:bg-node-blue/80 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/50"
+            className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-node-blue hover:bg-node-blue/80 text-white text-sm sm:text-base font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/50"
           >
             <span>Descubre cómo podemos ayudarte</span>
             <svg
-              className="w-5 h-5 ml-2"
+              className="w-4 h-4 sm:w-5 sm:h-5 ml-2"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

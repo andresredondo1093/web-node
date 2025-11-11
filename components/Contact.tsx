@@ -36,23 +36,23 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="relative py-32 px-6 lg:px-8">
+    <section id="contacto" className="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Información de contacto */}
           <ScrollReveal direction="left">
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
             <div>
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-node-blue/10 border border-node-blue/30 rounded-full mb-6">
-                <span className="text-sm text-node-blue font-medium">
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-node-blue/10 border border-node-blue/30 rounded-full mb-4 sm:mb-6">
+                <span className="text-xs sm:text-sm text-node-blue font-medium">
                   Hablemos
                 </span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6">
                 ¿Listo para transformar tu empresa con{' '}
                 <span className="text-node-blue">IA?</span>
               </h2>
-              <p className="text-lg text-white/70 leading-relaxed">
+              <p className="text-base sm:text-lg text-white/70 leading-relaxed">
                 Cuéntanos sobre tu proyecto y descubre cómo nuestras soluciones
                 de inteligencia artificial pueden llevar tu negocio al siguiente
                 nivel.
@@ -60,12 +60,12 @@ export default function Contact() {
             </div>
 
             {/* Info cards */}
-            <div className="space-y-4">
-              <div className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="space-y-3 sm:space-y-4">
+              <div className="p-4 sm:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-6 h-6 text-node-blue"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-node-blue"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -79,17 +79,17 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">Email</h3>
-                    <p className="text-white/70">contacto@nodesolutions.es</p>
+                    <h3 className="text-white text-sm sm:text-base font-semibold mb-1">Email</h3>
+                    <p className="text-white/70 text-sm sm:text-base break-all">contacto@nodesolutions.es</p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="p-4 sm:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-6 h-6 text-node-blue"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-node-blue"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -103,21 +103,21 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">
+                    <h3 className="text-white text-sm sm:text-base font-semibold mb-1">
                       Horario de atención
                     </h3>
-                    <p className="text-white/70">
+                    <p className="text-white/70 text-sm sm:text-base">
                       Lunes a Viernes: 9:00 - 18:00
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="p-4 sm:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg
-                      className="w-6 h-6 text-node-blue"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-node-blue"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -131,10 +131,10 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">
+                    <h3 className="text-white text-sm sm:text-base font-semibold mb-1">
                       Respuesta rápida
                     </h3>
-                    <p className="text-white/70">
+                    <p className="text-white/70 text-sm sm:text-base">
                       Te respondemos en menos de 24 horas
                     </p>
                   </div>
@@ -147,16 +147,16 @@ export default function Contact() {
           {/* Formulario */}
           <ScrollReveal direction="right" delay={200}>
             <div className="relative">
-            <div className="relative p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+            <div className="relative p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
               {/* Glow effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-node-blue to-chip-blue opacity-20 blur-xl" />
 
-              <form onSubmit={handleSubmit} className="relative space-y-6">
+              <form onSubmit={handleSubmit} className="relative space-y-4 sm:space-y-6">
                 {/* Nombre */}
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-white mb-2"
+                    className="block text-xs sm:text-sm font-medium text-white mb-2"
                   >
                     Nombre completo *
                   </label>
@@ -167,7 +167,7 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -176,7 +176,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-white mb-2"
+                    className="block text-xs sm:text-sm font-medium text-white mb-2"
                   >
                     Email corporativo *
                   </label>
@@ -187,7 +187,7 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
                     placeholder="tu@empresa.com"
                   />
                 </div>
@@ -196,7 +196,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="company"
-                    className="block text-sm font-medium text-white mb-2"
+                    className="block text-xs sm:text-sm font-medium text-white mb-2"
                   >
                     Empresa
                   </label>
@@ -206,7 +206,7 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
                     placeholder="Nombre de tu empresa"
                   />
                 </div>
@@ -215,7 +215,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-white mb-2"
+                    className="block text-xs sm:text-sm font-medium text-white mb-2"
                   >
                     Teléfono
                   </label>
@@ -225,7 +225,7 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
                     placeholder="+34 600 000 000"
                   />
                 </div>
@@ -234,7 +234,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-white mb-2"
+                    className="block text-xs sm:text-sm font-medium text-white mb-2"
                   >
                     Cuéntanos sobre tu proyecto *
                   </label>
@@ -245,7 +245,7 @@ export default function Contact() {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all resize-none"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all resize-none"
                     placeholder="Describe qué necesitas y cómo podemos ayudarte..."
                   />
                 </div>
@@ -254,7 +254,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="w-full px-8 py-4 bg-node-blue hover:bg-node-blue/80 disabled:bg-node-blue/50 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/50 disabled:cursor-not-allowed"
+                  className="w-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-node-blue hover:bg-node-blue/80 disabled:bg-node-blue/50 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/50 disabled:cursor-not-allowed"
                 >
                   {status === 'loading' ? 'Enviando...' : 'Enviar mensaje'}
                 </button>
