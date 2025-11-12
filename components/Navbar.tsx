@@ -26,13 +26,13 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'bg-black/80 backdrop-blur-lg border-b border-node-blue/20'
-          : 'bg-transparent'
+          : 'bg-black/40 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3 md:py-4">
           {/* Logo */}
-          <a href="#inicio" className="flex items-center">
+          <a href="#inicio" className="flex items-center relative z-10">
             <Image
               src="/isotipo.png"
               alt="Node Solutions"
@@ -67,7 +67,7 @@ export default function Navbar() {
 
           {/* Botón hamburguesa móvil */}
           <button 
-            className="md:hidden text-white p-2"
+            className="md:hidden relative z-50 text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Abrir menú"
           >

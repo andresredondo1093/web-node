@@ -18,8 +18,8 @@ export default function Hero() {
           <ScrollReveal direction="left">
             <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
             {/* Logo para móvil - Solo visible en pantallas pequeñas */}
-            <div className="lg:hidden flex justify-center mb-8">
-              <div className="relative">
+            <div className="lg:hidden flex justify-center mb-8 overflow-hidden">
+              <div className="relative max-w-full">
                 {/* Círculo de fondo con efecto glow */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-48 h-48 bg-node-blue/20 rounded-full blur-2xl animate-pulse" />
@@ -31,7 +31,7 @@ export default function Hero() {
                     alt="Node Solutions"
                     width={280}
                     height={280}
-                    className="w-56 h-56 sm:w-64 sm:h-64 object-contain drop-shadow-2xl"
+                    className="w-56 h-56 sm:w-64 sm:h-64 object-contain drop-shadow-2xl max-w-full"
                   />
                 </div>
               </div>
