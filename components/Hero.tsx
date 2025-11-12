@@ -17,6 +17,26 @@ export default function Hero() {
           {/* Contenido de texto */}
           <ScrollReveal direction="left">
             <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+            {/* Logo para móvil - Solo visible en pantallas pequeñas */}
+            <div className="lg:hidden flex justify-center mb-8">
+              <div className="relative">
+                {/* Círculo de fondo con efecto glow */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-48 h-48 bg-node-blue/20 rounded-full blur-2xl animate-pulse" />
+                </div>
+                {/* Logo */}
+                <div className="relative">
+                  <Image
+                    src="/logo.png"
+                    alt="Node Solutions"
+                    width={280}
+                    height={280}
+                    className="w-56 h-56 sm:w-64 sm:h-64 object-contain drop-shadow-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+            
             {/* Título principal */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">
               <span className="text-white">Implementando</span>{' '}
