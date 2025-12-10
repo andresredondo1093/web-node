@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Node Solutions - Convertimos la IA en resultados reales",
+  title: "Node Solutions - Implementando IA de verdad a empresas reales",
   description: "Consultora especializada en transformar operaciones empresariales mediante inteligencia artificial. Agentes de IA, automatización y optimización de procesos.",
   icons: {
     icon: "/isotipo.png",
