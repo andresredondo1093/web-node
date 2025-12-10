@@ -9,8 +9,8 @@ export default function Footer() {
               Node Solutions
             </h3>
             <p className="text-sm sm:text-base text-white/60 mb-4 max-w-md">
-              Consultora especializada en transformar operaciones empresariales 
-              mediante inteligencia artificial. Convertimos la IA en resultados reales.
+              Implementando IA de verdad a empresas reales. Transformamos
+              negocios con soluciones de inteligencia artificial a medida.
             </p>
           </div>
 
