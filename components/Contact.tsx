@@ -170,136 +170,173 @@ export default function Contact() {
           {/* Formulario */}
           <ScrollReveal direction="right" delay={200}>
             <div className="relative">
-            <div className="relative p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl">
+            <div className="relative p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl min-h-[500px] flex items-center justify-center">
               {/* Glow effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-node-blue to-chip-blue opacity-20 blur-xl" />
 
-              <form onSubmit={handleSubmit} className="relative space-y-4 sm:space-y-6">
-                {/* Nombre */}
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-xs sm:text-sm font-medium text-white mb-2"
-                  >
-                    Nombre completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
-                    placeholder="Tu nombre"
-                  />
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-xs sm:text-sm font-medium text-white mb-2"
-                  >
-                    Email corporativo *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
-                    placeholder="tu@empresa.com"
-                  />
-                </div>
-
-                {/* Empresa */}
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-xs sm:text-sm font-medium text-white mb-2"
-                  >
-                    Empresa
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
-                    placeholder="Nombre de tu empresa"
-                  />
-                </div>
-
-                {/* Teléfono */}
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-xs sm:text-sm font-medium text-white mb-2"
-                  >
-                    Teléfono
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
-                    placeholder="+34 618 166 410"
-                  />
-                </div>
-
-                {/* Mensaje */}
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-xs sm:text-sm font-medium text-white mb-2"
-                  >
-                    Cuéntanos sobre tu proyecto *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all resize-none"
-                    placeholder="Describe qué necesitas y cómo podemos ayudarte..."
-                  />
-                </div>
-
-                {/* Submit button */}
-                <button
-                  type="submit"
-                  disabled={status === 'loading'}
-                  className="w-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-node-blue hover:bg-node-blue/80 disabled:bg-node-blue/50 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/50 disabled:cursor-not-allowed"
-                >
-                  {status === 'loading' ? 'Enviando...' : 'Enviar mensaje'}
-                </button>
-
-                {/* Success message */}
-                {status === 'success' && (
-                  <div className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
-                    <p className="text-green-400 text-sm text-center">
-                      ¡Mensaje enviado con éxito! Te contactaremos pronto.
+              {/* Success State */}
+              {status === 'success' ? (
+                <div className="relative text-center space-y-6 py-8 animate-fade-in">
+                  {/* Animated checkmark */}
+                  <div className="relative mx-auto w-24 h-24">
+                    <div className="absolute inset-0 bg-green-500/20 rounded-full animate-ping" />
+                    <div className="relative w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30">
+                      <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                      ¡Mensaje enviado! 🚀
+                    </h3>
+                    <p className="text-white/70 text-base sm:text-lg max-w-sm mx-auto">
+                      Gracias por contactarnos. Te responderemos en menos de 24 horas.
                     </p>
                   </div>
-                )}
 
-                {/* Error message */}
-                {status === 'error' && (
-                  <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
-                    <p className="text-red-400 text-sm text-center">
-                      Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.
-                    </p>
+                  <div className="pt-4">
+                    <div className="inline-flex items-center space-x-2 px-4 py-2 bg-node-blue/10 border border-node-blue/30 rounded-full">
+                      <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                      <span className="text-sm text-node-blue">Revisa tu bandeja de entrada</span>
+                    </div>
                   </div>
-                )}
-              </form>
+
+                  <button
+                    onClick={() => setStatus('idle')}
+                    className="mt-4 text-white/50 hover:text-white text-sm underline underline-offset-4 transition-colors"
+                  >
+                    Enviar otro mensaje
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="relative space-y-4 sm:space-y-6 w-full">
+                  {/* Nombre */}
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-xs sm:text-sm font-medium text-white mb-2"
+                    >
+                      Nombre completo *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
+                      placeholder="Tu nombre"
+                    />
+                  </div>
+
+                  {/* Email */}
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-xs sm:text-sm font-medium text-white mb-2"
+                    >
+                      Email corporativo *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
+                      placeholder="tu@empresa.com"
+                    />
+                  </div>
+
+                  {/* Empresa */}
+                  <div>
+                    <label
+                      htmlFor="company"
+                      className="block text-xs sm:text-sm font-medium text-white mb-2"
+                    >
+                      Empresa
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
+                      placeholder="Nombre de tu empresa"
+                    />
+                  </div>
+
+                  {/* Teléfono */}
+                  <div>
+                    <label
+                      htmlFor="phone"
+                      className="block text-xs sm:text-sm font-medium text-white mb-2"
+                    >
+                      Teléfono
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
+                      placeholder="+34 618 166 410"
+                    />
+                  </div>
+
+                  {/* Mensaje */}
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-xs sm:text-sm font-medium text-white mb-2"
+                    >
+                      Cuéntanos sobre tu proyecto *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all resize-none"
+                      placeholder="Describe qué necesitas y cómo podemos ayudarte..."
+                    />
+                  </div>
+
+                  {/* Submit button */}
+                  <button
+                    type="submit"
+                    disabled={status === 'loading'}
+                    className="w-full px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-node-blue hover:bg-node-blue/80 disabled:bg-node-blue/50 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/50 disabled:cursor-not-allowed"
+                  >
+                    {status === 'loading' ? (
+                      <span className="flex items-center justify-center space-x-2">
+                        <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                        </svg>
+                        <span>Enviando...</span>
+                      </span>
+                    ) : 'Enviar mensaje'}
+                  </button>
+
+                  {/* Error message */}
+                  {status === 'error' && (
+                    <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+                      <p className="text-red-400 text-sm text-center">
+                        Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.
+                      </p>
+                    </div>
+                  )}
+                </form>
+              )}
             </div>
             </div>
           </ScrollReveal>
