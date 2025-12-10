@@ -39,16 +39,16 @@ export default function Hero() {
             
             {/* Título principal */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">
-              <span className="text-white">Convertimos la</span>{' '}
-              <span className="text-node-blue">IA en resultados</span>{' '}
-              <span className="text-white">reales</span>
+              <span className="text-white">Implementando</span>{' '}
+              <span className="text-node-blue">IA de verdad</span>{' '}
+              <span className="text-white">a empresas reales</span>
             </h1>
 
             {/* Descripción */}
             <p className="text-base sm:text-lg lg:text-xl text-white/70 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-              Consultora especializada en transformar operaciones empresariales. 
-              Diseñamos agentes de IA, automatizamos procesos y optimizamos 
-              tu negocio para ganar eficiencia y liberar tiempo a tu equipo.
+              Transformamos tu negocio con soluciones de Inteligencia Artificial
+              a medida. Automatización, agentes inteligentes y optimización de
+              procesos que generan resultados reales.
             </p>
 
             {/* CTAs */}
