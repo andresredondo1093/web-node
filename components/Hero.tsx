@@ -39,16 +39,16 @@ export default function Hero() {
             
             {/* Título principal */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">
-              <span className="text-white">Implementando</span>{' '}
-              <span className="text-node-blue">IA de verdad</span>{' '}
-              <span className="text-white">a empresas reales</span>
+              <span className="text-white">Convertimos la</span>{' '}
+              <span className="text-node-blue">IA en resultados</span>{' '}
+              <span className="text-white">reales</span>
             </h1>
 
             {/* Descripción */}
             <p className="text-base sm:text-lg lg:text-xl text-white/70 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-              Transformamos tu negocio con soluciones de Inteligencia Artificial
-              a medida. Automatización, agentes inteligentes y optimización de
-              procesos que generan resultados reales.
+              Consultora especializada en transformar operaciones empresariales. 
+              Diseñamos agentes de IA, automatizamos procesos y optimizamos 
+              tu negocio para ganar eficiencia y liberar tiempo a tu equipo.
             </p>
 
             {/* CTAs */}
@@ -70,16 +70,16 @@ export default function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-white/10">
               <div>
-                <div className="text-2xl sm:text-3xl font-bold text-node-blue">100+</div>
-                <div className="text-xs sm:text-sm text-white/60">Proyectos</div>
+                <div className="text-2xl sm:text-3xl font-bold text-node-blue">+1 año</div>
+                <div className="text-xs sm:text-sm text-white/60">Implementando proyectos de IA</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-bold text-node-blue">50+</div>
-                <div className="text-xs sm:text-sm text-white/60">Clientes</div>
+                <div className="text-2xl sm:text-3xl font-bold text-node-blue">24/7</div>
+                <div className="text-xs sm:text-sm text-white/60">Automatización continua</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-bold text-node-blue">98%</div>
-                <div className="text-xs sm:text-sm text-white/60">Satisfacción</div>
+                <div className="text-2xl sm:text-3xl font-bold text-node-blue">100%</div>
+                <div className="text-xs sm:text-sm text-white/60">Soluciones a medida</div>
               </div>
             </div>
             </div>

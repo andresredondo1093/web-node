@@ -18,12 +18,36 @@ export default function Contact() {
     e.preventDefault();
     setStatus('loading');
 
-    // Simular envío de formulario
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', company: '', phone: '', message: '' });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+      
+      if (response.ok && data.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', company: '', phone: '', message: '' });
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Error enviando formulario:', error);
+      setStatus('error');
       setTimeout(() => setStatus('idle'), 5000);
-    }, 1500);
+    }
   };
 
   const handleChange = (
@@ -49,13 +73,12 @@ export default function Contact() {
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6">
-                ¿Listo para transformar tu empresa con{' '}
-                <span className="text-node-blue">IA?</span>
+                ¿Listo para mejorar tu{' '}
+                <span className="text-node-blue">productividad?</span>
               </h2>
               <p className="text-base sm:text-lg text-white/70 leading-relaxed">
-                Cuéntanos sobre tu proyecto y descubre cómo nuestras soluciones
-                de inteligencia artificial pueden llevar tu negocio al siguiente
-                nivel.
+                Cuéntanos qué procesos quieres optimizar y te ayudaremos a 
+                diseñar la solución de IA que mejor se adapte a tu negocio.
               </p>
             </div>
 
@@ -80,7 +103,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white text-sm sm:text-base font-semibold mb-1">Email</h3>
-                    <p className="text-white/70 text-sm sm:text-base break-all">contacto@nodesolutions.es</p>
+                    <p className="text-white/70 text-sm sm:text-base break-all">andres.redondo@nodesolutions.es</p>
                   </div>
                 </div>
               </div>
@@ -226,7 +249,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-node-blue focus:ring-1 focus:ring-node-blue transition-all"
-                    placeholder="+34 600 000 000"
+                    placeholder="+34 618 166 410"
                   />
                 </div>
 
@@ -264,6 +287,15 @@ export default function Contact() {
                   <div className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
                     <p className="text-green-400 text-sm text-center">
                       ¡Mensaje enviado con éxito! Te contactaremos pronto.
+                    </p>
+                  </div>
+                )}
+
+                {/* Error message */}
+                {status === 'error' && (
+                  <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+                    <p className="text-red-400 text-sm text-center">
+                      Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.
                     </p>
                   </div>
                 )}

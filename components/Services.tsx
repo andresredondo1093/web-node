@@ -3,9 +3,15 @@
 import ScrollReveal from './ScrollReveal';
 
 // Iconos SVG corporativos
-const ChatBotIcon = () => (
+const AgentIcon = () => (
   <svg className="w-8 h-8 text-node-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+  </svg>
+);
+
+const VoiceIcon = () => (
+  <svg className="w-8 h-8 text-node-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
   </svg>
 );
 
@@ -22,67 +28,61 @@ const IntegrationIcon = () => (
   </svg>
 );
 
-const VoiceIcon = () => (
+const DocumentIcon = () => (
   <svg className="w-8 h-8 text-node-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
   </svg>
 );
 
-const KnowledgeIcon = () => (
+const ConsultingIcon = () => (
   <svg className="w-8 h-8 text-node-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-  </svg>
-);
-
-const CustomIcon = () => (
-  <svg className="w-8 h-8 text-node-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
   </svg>
 );
 
 export default function Services() {
   const services = [
     {
-      icon: <ChatBotIcon />,
-      title: 'Agentes de IA',
+      icon: <AgentIcon />,
+      title: 'Agentes Conversacionales',
       description:
-        'Desarrollamos chatbots inteligentes y agentes virtuales personalizados que automatizan la atención al cliente y optimizan procesos empresariales.',
-      features: ['Chatbots conversacionales', 'Asistentes virtuales', 'Integración multicanal'],
-    },
-    {
-      icon: <AutomationIcon />,
-      title: 'Automatización Inteligente',
-      description:
-        'Implementamos soluciones de automatización con IA y OCR para optimizar procesos repetitivos y aumentar la eficiencia operativa.',
-      features: ['Automatización de procesos', 'OCR avanzado', 'Flujos inteligentes'],
-    },
-    {
-      icon: <IntegrationIcon />,
-      title: 'Integración de Sistemas',
-      description:
-        'Conectamos tus sistemas existentes con IA para crear ecosistemas inteligentes que mejoran la toma de decisiones y productividad.',
-      features: ['APIs inteligentes', 'Sincronización de datos', 'Integración legacy'],
+        'Diseñamos chatbots y asistentes virtuales inteligentes para mejorar la atención al cliente, automatizar ventas y resolver consultas 24/7.',
+      features: ['Atención al cliente', 'Automatización de ventas', 'Soporte multicanal'],
     },
     {
       icon: <VoiceIcon />,
       title: 'Agentes de Voz',
       description:
-        'Creamos asistentes de voz con IA para atención telefónica automatizada, gestión de llamadas y soporte al cliente 24/7.',
-      features: ['IVR inteligente', 'Reconocimiento de voz', 'Síntesis de voz natural'],
+        'Creamos asistentes de voz con IA para gestionar llamadas, cualificar leads y ofrecer soporte telefónico automatizado.',
+      features: ['Gestión de llamadas', 'Cualificación de leads', 'IVR inteligente'],
     },
     {
-      icon: <KnowledgeIcon />,
-      title: 'RAG & Conocimiento',
+      icon: <AutomationIcon />,
+      title: 'Automatización con IA',
       description:
-        'Desarrollamos sistemas RAG (Retrieval-Augmented Generation) que permiten a los agentes de IA acceder y utilizar el conocimiento de tu empresa.',
-      features: ['Bases de conocimiento', 'Búsqueda semántica', 'Respuestas contextuales'],
+        'Optimizamos tus procesos empresariales mediante automatización inteligente. Reduce costes operativos y libera tiempo de tu equipo.',
+      features: ['Optimización de procesos', 'Reducción de costes', 'Flujos automatizados'],
     },
     {
-      icon: <CustomIcon />,
-      title: 'Soluciones a Medida',
+      icon: <IntegrationIcon />,
+      title: 'Integración de Sistemas',
       description:
-        'Diseñamos e implementamos soluciones personalizadas de IA adaptadas a las necesidades específicas de tu negocio.',
-      features: ['Consultoría especializada', 'Desarrollo custom', 'Soporte continuo'],
+        'Conectamos ChatGPT y otras plataformas de IA con tus sistemas empresariales (CRM, ERP, bases de datos) para escalar capacidades.',
+      features: ['ChatGPT empresarial', 'Conexión con CRM/ERP', 'APIs personalizadas'],
+    },
+    {
+      icon: <DocumentIcon />,
+      title: 'Digitalización de Documentos',
+      description:
+        'Automatizamos la lectura y procesamiento de documentos e imágenes con OCR e IA para optimizar tareas y ganar eficiencia.',
+      features: ['OCR inteligente', 'Extracción de datos', 'Procesamiento automático'],
+    },
+    {
+      icon: <ConsultingIcon />,
+      title: 'Consultoría en IA',
+      description:
+        'Te ayudamos a identificar oportunidades de mejora y diseñamos la estrategia de IA adecuada para tu negocio.',
+      features: ['Análisis de procesos', 'Estrategia de IA', 'Roadmap de implementación'],
     },
   ];
 
@@ -98,12 +98,12 @@ export default function Services() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6 px-4">
-            Soluciones de IA que{' '}
-            <span className="text-node-blue">transforman negocios</span>
+            Transformamos operaciones con{' '}
+            <span className="text-node-blue">Inteligencia Artificial</span>
           </h2>
           <p className="text-base sm:text-lg text-white/70 max-w-3xl mx-auto px-4">
-            Implementamos tecnología de inteligencia artificial de vanguardia para
-            resolver problemas reales y generar valor tangible en tu empresa.
+            Mejoramos tu productividad, reducimos costes operativos y escalamos 
+            las capacidades de tu equipo mediante soluciones de IA a medida.
           </p>
           </div>
         </ScrollReveal>
@@ -115,8 +115,9 @@ export default function Services() {
               key={index}
               direction={index % 2 === 0 ? 'left' : 'right'}
               delay={index * 100}
+              className="h-full"
             >
-              <div className="group relative p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-node-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/10 hover:-translate-y-1">
+              <div className="group relative h-full p-6 sm:p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 hover:border-node-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/10 hover:-translate-y-1">
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-node-blue/0 via-node-blue/0 to-node-blue/0 group-hover:from-node-blue/5 group-hover:to-transparent rounded-2xl transition-all duration-300" />
 
@@ -168,7 +169,7 @@ export default function Services() {
             href="#contacto"
             className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-node-blue hover:bg-node-blue/80 text-white text-sm sm:text-base font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-node-blue/50"
           >
-            <span>Descubre cómo podemos ayudarte</span>
+            <span>Cuéntanos tu proyecto</span>
             <svg
               className="w-4 h-4 sm:w-5 sm:h-5 ml-2"
               fill="none"
@@ -189,5 +190,3 @@ export default function Services() {
     </section>
   );
 }
-
-

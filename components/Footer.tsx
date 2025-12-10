@@ -9,8 +9,8 @@ export default function Footer() {
               Node Solutions
             </h3>
             <p className="text-sm sm:text-base text-white/60 mb-4 max-w-md">
-              Implementando IA de verdad a empresas reales. Transformamos
-              negocios con soluciones de inteligencia artificial a medida.
+              Consultora especializada en transformar operaciones empresariales 
+              mediante inteligencia artificial. Convertimos la IA en resultados reales.
             </p>
           </div>
 
@@ -49,8 +49,8 @@ export default function Footer() {
           <div>
             <h4 className="text-xs sm:text-sm font-semibold text-white mb-3 sm:mb-4">Contacto</h4>
             <ul className="space-y-2">
-              <li className="text-sm sm:text-base text-white/60 break-all">contacto@nodesolutions.es</li>
-              <li className="text-sm sm:text-base text-white/60">+34 600 000 000</li>
+              <li className="text-sm sm:text-base text-white/60 break-all">andres.redondo@nodesolutions.es</li>
+              <li className="text-sm sm:text-base text-white/60">+34 618 166 410</li>
             </ul>
           </div>
         </div>
