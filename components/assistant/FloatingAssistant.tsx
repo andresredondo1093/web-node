@@ -79,29 +79,50 @@ export default function FloatingAssistant() {
         </div>
       )}
 
-      {/* Botón principal */}
-      <button
-        onClick={handleMainButtonClick}
-        className={`fixed bottom-6 right-6 z-[9999] w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 ${
-          isMenuOpen || isChatOpen || isVoiceOpen
-            ? 'bg-white/10 border border-white/20 shadow-black/20'
-            : 'bg-gradient-to-br from-node-blue to-chip-blue shadow-node-blue/40'
-        }`}
-        aria-label={isChatOpen ? 'Cerrar chat' : isVoiceOpen ? 'Cerrar voz' : isMenuOpen ? 'Cerrar menú' : 'Abrir asistente'}
-      >
-        {isMenuOpen || isChatOpen || isVoiceOpen ? (
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        ) : (
+      {/* Burbuja de texto llamativa */}
+      {!isMenuOpen && !isChatOpen && !isVoiceOpen && (
+        <div className="fixed bottom-8 right-24 z-[9998] animate-fade-in-delayed">
+          <div className="relative bg-gradient-to-r from-node-blue to-chip-blue text-white px-4 py-2.5 rounded-2xl rounded-br-sm shadow-lg shadow-node-blue/30 animate-bounce-subtle">
+            <p className="text-sm font-medium whitespace-nowrap">¡Hola! 👋 ¿Te ayudo?</p>
+            {/* Flecha apuntando al botón */}
+            <div className="absolute -right-2 bottom-1 w-3 h-3 bg-chip-blue rotate-45" />
+          </div>
+        </div>
+      )}
+
+      {/* Botón principal con efectos */}
+      <div className="fixed bottom-6 right-6 z-[9999]">
+        {/* Ondas expansivas (solo cuando está cerrado) */}
+        {!isMenuOpen && !isChatOpen && !isVoiceOpen && (
           <>
-            <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-            </svg>
-            <span className="absolute top-0 right-0 w-3 h-3 bg-green-400 rounded-full border-2 border-[#1a1a1a] animate-pulse" />
+            <span className="absolute inset-0 w-14 h-14 rounded-full bg-node-blue/40 animate-ping-slow" />
+            <span className="absolute inset-0 w-14 h-14 rounded-full bg-node-blue/20 animate-ping-slower" />
           </>
         )}
-      </button>
+        
+        <button
+          onClick={handleMainButtonClick}
+          className={`relative w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 ${
+            isMenuOpen || isChatOpen || isVoiceOpen
+              ? 'bg-white/10 border border-white/20 shadow-black/20'
+              : 'bg-gradient-to-br from-node-blue to-chip-blue shadow-node-blue/40 animate-bounce-gentle'
+          }`}
+          aria-label={isChatOpen ? 'Cerrar chat' : isVoiceOpen ? 'Cerrar voz' : isMenuOpen ? 'Cerrar menú' : 'Abrir asistente'}
+        >
+          {isMenuOpen || isChatOpen || isVoiceOpen ? (
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <>
+              <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              </svg>
+              <span className="absolute top-0 right-0 w-3 h-3 bg-green-400 rounded-full border-2 border-[#1a1a1a] animate-pulse" />
+            </>
+          )}
+        </button>
+      </div>
 
       {/* Widgets */}
       <ChatWidget isOpen={isChatOpen} onOpenChange={setIsChatOpen} />
