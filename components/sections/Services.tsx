@@ -1,6 +1,6 @@
 'use client';
 
-import ScrollReveal from './ScrollReveal';
+import { ScrollReveal } from '../ui';
 
 // Iconos SVG corporativos
 const AgentIcon = () => (
@@ -190,3 +190,4 @@ export default function Services() {
     </section>
   );
 }
+

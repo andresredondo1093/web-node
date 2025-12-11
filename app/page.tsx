@@ -1,9 +1,7 @@
-import AnimatedBackground from '@/components/AnimatedBackground';
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import { AnimatedBackground } from '@/components/ui';
+import { Navbar, Footer } from '@/components/layout';
+import { Hero, Services, Contact } from '@/components/sections';
+import { FloatingAssistant } from '@/components/assistant';
 
 export default function Home() {
   return (
@@ -16,6 +14,7 @@ export default function Home() {
         <Contact />
         <Footer />
       </div>
+      <FloatingAssistant />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import ScrollReveal from './ScrollReveal';
+import { ScrollReveal } from '../ui';
 
 export default function Hero() {
   return (
@@ -136,5 +136,4 @@ export default function Hero() {
     </section>
   );
 }
-
 

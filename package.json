@@ -9,10 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@n8n/chat": "^1.0.0",
     "autoprefixer": "^10.4.22",
     "next": "^16.0.8",
     "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+    "react-dom": "^19.2.1",
+    "ultravox-client": "^0.4.2"
   },
   "devDependencies": {
     "@types/node": "^20",

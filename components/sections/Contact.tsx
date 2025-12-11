@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import ScrollReveal from './ScrollReveal';
+import { ScrollReveal } from '../ui';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -345,5 +345,4 @@ export default function Contact() {
     </section>
   );
 }
-
 
