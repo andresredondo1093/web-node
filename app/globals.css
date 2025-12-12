@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --node-blue: #0099cc;
-  --chip-blue: #206880;
-  --light-violet: #c1d9ff;
-}
-
 html, body {
   background: #0a0a0a;
   color: white;

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 // Tipos para Ultravox
 type UltravoxSessionStatus = 
@@ -19,6 +20,15 @@ interface Transcript {
   medium: 'voice' | 'text';
 }
 
+// Interfaz para la sesión de Ultravox (el SDK no exporta tipos)
+interface UltravoxSession {
+  status: UltravoxSessionStatus;
+  transcripts: Transcript[];
+  joinCall: (url: string) => void;
+  leaveCall: () => Promise<void>;
+  addEventListener: (event: string, callback: () => void) => void;
+}
+
 interface VoiceAgentProps {
   isOpen: boolean;
   onClose: () => void;
@@ -31,8 +41,7 @@ export default function VoiceAgent({ isOpen, onClose }: VoiceAgentProps) {
   const [transcripts, setTranscripts] = useState<Transcript[]>([]);
   const [error, setError] = useState<string | null>(null);
   
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const sessionRef = useRef<any>(null);
+  const sessionRef = useRef<UltravoxSession | null>(null);
   const transcriptsEndRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll transcripts
@@ -89,8 +98,7 @@ export default function VoiceAgent({ isOpen, onClose }: VoiceAgentProps) {
 
       // Listener de transcripciones
       session.addEventListener('transcripts', () => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const newTranscripts = session.transcripts.map((t: any) => ({
+        const newTranscripts = session.transcripts.map((t: Transcript) => ({
           text: t.text,
           isFinal: t.isFinal,
           speaker: t.speaker,
@@ -162,11 +170,12 @@ export default function VoiceAgent({ isOpen, onClose }: VoiceAgentProps) {
         <div className="relative bg-gradient-to-r from-node-blue/20 to-chip-blue/20 px-4 py-3 border-b border-white/10">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-10 h-10 rounded-full border-2 border-node-blue/50 overflow-hidden">
-                <img 
+              <div className="w-10 h-10 rounded-full border-2 border-node-blue/50 overflow-hidden relative">
+                <Image 
                   src="/voice-avatar.png" 
                   alt="Asistente"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               {isCallActive && (
@@ -194,17 +203,18 @@ export default function VoiceAgent({ isOpen, onClose }: VoiceAgentProps) {
         </div>
 
         {/* Contenido principal */}
-        <div className="flex flex-col" style={{ height: '380px' }}>
+        <div className="flex flex-col h-[380px]">
           {!isCallActive ? (
             // Vista inicial - Iniciar llamada
             <div className="flex-1 flex flex-col items-center justify-center px-6 py-8">
               <div className="relative mb-6">
                 <div className="absolute inset-0 bg-gradient-to-br from-node-blue to-chip-blue rounded-full blur-lg opacity-40 scale-110" />
                 <div className="relative w-28 h-28 rounded-full border-4 border-node-blue/50 overflow-hidden">
-                  <img 
+                  <Image 
                     src="/voice-avatar.png" 
                     alt="Asistente de voz"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>

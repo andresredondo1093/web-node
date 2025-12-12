@@ -75,18 +75,14 @@ export default function ChatWidget({ isOpen, onOpenChange }: ChatWidgetProps) {
     }
   }, [isOpen]);
 
-  // Añadir estilos para ocultar el toggle de n8n y posicionar el chat correctamente
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.id = 'n8n-chat-custom-position';
-    style.textContent = `
-      /* Ocultar cualquier toggle de n8n */
+  return (
+    <style jsx global>{`
+      /* Posicionar el chat */
       .n8n-chat > button:first-child,
       .chat-window-wrapper > button {
         display: none !important;
       }
       
-      /* Posicionar el chat en la esquina inferior derecha */
       .chat-window {
         position: fixed !important;
         bottom: 90px !important;
@@ -99,7 +95,6 @@ export default function ChatWidget({ isOpen, onOpenChange }: ChatWidgetProps) {
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
       }
       
-      /* Responsive para móvil */
       @media (max-width: 480px) {
         .chat-window {
           width: calc(100vw - 32px) !important;
@@ -110,19 +105,7 @@ export default function ChatWidget({ isOpen, onOpenChange }: ChatWidgetProps) {
           max-height: 70vh !important;
         }
       }
-    `;
-    document.head.appendChild(style);
-    
-    return () => {
-      const existingStyle = document.getElementById('n8n-chat-custom-position');
-      if (existingStyle) {
-        document.head.removeChild(existingStyle);
-      }
-    };
-  }, []);
 
-  return (
-    <style jsx global>{`
       /* Estilos personalizados para el chat de n8n */
       :root {
         --chat--color-primary: #0099cc;
