@@ -156,7 +156,7 @@ export default function VoiceAgent({ isOpen, onClose }: VoiceAgentProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-24 right-6 z-[9999] w-[360px] animate-fade-in">
+    <div className="fixed bottom-24 inset-x-4 sm:inset-x-auto sm:right-6 sm:left-auto z-[9999] sm:w-[360px] animate-fade-in">
       <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl shadow-2xl shadow-node-blue/20 overflow-hidden">
         {/* Header */}
         <div className="relative bg-gradient-to-r from-node-blue/20 to-chip-blue/20 px-4 py-3 border-b border-white/10">
