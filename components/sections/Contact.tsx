@@ -62,108 +62,88 @@ export default function Contact() {
   return (
     <section id="contacto" className="relative py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-stretch">
           {/* Información de contacto */}
-          <ScrollReveal direction="left">
-            <div className="space-y-6 sm:space-y-8">
-            <div>
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-node-blue/10 border border-node-blue/30 rounded-full mb-4 sm:mb-6">
-                <span className="text-xs sm:text-sm text-node-blue font-medium">
-                  Hablemos
-                </span>
+          <ScrollReveal direction="left" className="h-full">
+            <div className="h-full flex flex-col">
+              <div className="mb-6 sm:mb-8">
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-node-blue/10 border border-node-blue/30 rounded-full mb-4 sm:mb-6">
+                  <span className="text-xs sm:text-sm text-node-blue font-medium">
+                    Hablemos
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6">
+                  ¿Listo para mejorar tu{' '}
+                  <span className="text-node-blue">productividad?</span>
+                </h2>
+                <p className="text-base sm:text-lg text-white/70 leading-relaxed">
+                  Cuéntanos qué procesos quieres optimizar y te ayudaremos a 
+                  diseñar la solución de IA que mejor se adapte a tu negocio.
+                </p>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-4 sm:mb-6">
-                ¿Listo para mejorar tu{' '}
-                <span className="text-node-blue">productividad?</span>
-              </h2>
-              <p className="text-base sm:text-lg text-white/70 leading-relaxed">
-                Cuéntanos qué procesos quieres optimizar y te ayudaremos a 
-                diseñar la solución de IA que mejor se adapte a tu negocio.
-              </p>
-            </div>
 
-            {/* Info cards */}
-            <div className="space-y-3 sm:space-y-4">
-              <div className="p-4 sm:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 sm:w-6 sm:h-6 text-node-blue"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
+              {/* Info cards - 3 columnas más grandes */}
+              <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="p-4 sm:p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-node-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-white text-sm sm:text-base font-semibold mb-1">Email</h3>
-                    <p className="text-white/70 text-sm sm:text-base break-all">andres.redondo@nodesolutions.es</p>
+                  <h3 className="text-white text-sm sm:text-base font-semibold mb-1">Email</h3>
+                  <p className="text-white/60 text-xs sm:text-sm break-all">andres.redondo@nodesolutions.es</p>
+                </div>
+
+                <div className="p-4 sm:p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-node-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                   </div>
+                  <h3 className="text-white text-sm sm:text-base font-semibold mb-1">Horario</h3>
+                  <p className="text-white/60 text-xs sm:text-sm">Lunes a Viernes: 9-18h</p>
+                </div>
+
+                <div className="p-4 sm:p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-node-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-white text-sm sm:text-base font-semibold mb-1">Respuesta</h3>
+                  <p className="text-white/60 text-xs sm:text-sm">Menos de 24 horas</p>
                 </div>
               </div>
 
-              <div className="p-4 sm:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 sm:w-6 sm:h-6 text-node-blue"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
+              {/* Calendly CTA - Prominente y flexible */}
+              <a
+                href="https://calendly.com/andres-redondo-nodesolutions/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center p-6 sm:p-8 bg-gradient-to-br from-node-blue/20 via-node-blue/10 to-node-blue/5 backdrop-blur-sm border border-node-blue/30 rounded-2xl hover:from-node-blue/30 hover:via-node-blue/15 transition-all duration-300 group"
+              >
+                <div className="flex items-center gap-5 w-full">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-node-blue/20 border border-node-blue/40 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-node-blue/30 group-hover:scale-105 transition-all">
+                    <svg className="w-7 h-7 sm:w-8 sm:h-8 text-node-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-white text-sm sm:text-base font-semibold mb-1">
-                      Horario de atención
+                  <div className="flex-1">
+                    <h3 className="text-white text-lg sm:text-xl font-semibold mb-1">
+                      ¿Prefieres agendar directamente?
                     </h3>
-                    <p className="text-white/70 text-sm sm:text-base">
-                      Lunes a Viernes: 9:00 - 18:00
+                    <p className="text-white/60 text-sm sm:text-base">
+                      Reserva una llamada de 30 min · Sin compromiso
                     </p>
                   </div>
-                </div>
-              </div>
-
-              <div className="p-4 sm:p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start space-x-3 sm:space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-node-blue/10 border border-node-blue/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg
-                      className="w-5 h-5 sm:w-6 sm:h-6 text-node-blue"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
+                  <div className="flex items-center gap-2 text-node-blue font-semibold text-base group-hover:gap-3 transition-all">
+                    <span className="hidden sm:inline">Agendar</span>
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-white text-sm sm:text-base font-semibold mb-1">
-                      Respuesta rápida
-                    </h3>
-                    <p className="text-white/70 text-sm sm:text-base">
-                      Te respondemos en menos de 24 horas
-                    </p>
-                  </div>
                 </div>
-              </div>
-            </div>
+              </a>
             </div>
           </ScrollReveal>
 
